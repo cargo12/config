@@ -1,0 +1,13 @@
+#Shell script to create a new user
+
+echo " Enter Account Name:"
+read ACCOUNTVAR
+
+echo " Enter Accounts' Password"
+read PASSVAR
+
+echo " Enter Group"
+read GROUPVAR
+
+net user $ACCOUNTVAR $PASSVAR /add
+net localgroup $GROUPVAR $ACCOUNTVAR /add
